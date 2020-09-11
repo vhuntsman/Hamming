@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Hamming</name>
+    </assembly>
+    <members>
+        <member name="T:Hamming.HamEcc">
+            <summary>
+                Encoder decoder for Hamming ECC.
+            </summary>
+        </member>
+        <member name="M:Hamming.HamEcc.GenerateChecksum(System.Byte[])">
+            <summary>
+                Generates the Hamming ECC code for an array of data data.
+            </summary>
+            <param name="data">Array of data.</param>
+            <returns>A 4 byte ECC checksum.</returns>
+        </member>
+        <member name="M:Hamming.HamEcc.Verify(System.Byte[],System.Int32)">
+            <summary>
+                Verifies a data block against its ECC checksum.
+            </summary>
+            <param name="data">The received data block.</param>
+            <param name="rcvChecksum">The received checksum.</param>
+            <returns> Data and checksum error bit position tuple. Returns -1 if there are no errors.</returns>
+        </member>
+        <member name="M:Hamming.HamEcc.StringToByteArray(System.String)">
+            <summary>
+                Converts a hexadecimal string to an array of data.
+            </summary>
+            <param name="hex">Hexadecimal string.</param>
+            <returns>Array of data, LSB first (little endian).</returns>
+        </member>
+    </members>
+</doc>
